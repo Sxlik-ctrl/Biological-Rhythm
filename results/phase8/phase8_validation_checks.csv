@@ -1,0 +1,11 @@
+check,expected,observed,status
+Total subjects = 55,55,55,PASS
+Condition subjects = 23,23,23,PASS
+Control subjects = 32,32,32,PASS
+Activity feature rows = 55,55,55,PASS
+Sleep feature rows = 55,55,55,PASS
+Cosinor subjects = 55,55,55,PASS
+FDR-significant features = 7,7,7,PASS
+Gradient Boosting ROC-AUC,Approximately 0.895,0.8953804347826086,PASS
+Gradient Boosting accuracy,Approximately 0.818,0.8181818181818182,PASS
+Top explainability feature,estimated_sleep_hours,estimated_sleep_hours,PASS

@@ -1,0 +1,13 @@
+metric,value
+Dataset subjects,55
+Condition subjects,23
+Control subjects,32
+Activity feature rows,55
+Sleep feature rows,55
+Cosinor subjects,55
+FDR-significant features,7
+Gradient Boosting accuracy,0.8181818181818182
+Gradient Boosting F1,0.7727272727272727
+Gradient Boosting ROC-AUC,0.8953804347826086
+Top explainability feature,estimated_sleep_hours
+Highest feature group,Sleep

@@ -1,0 +1,163 @@
+{
+    "phase": "Phase 7 - Explainability and Final Evaluation",
+    "dataset": {
+        "subjects": 55,
+        "control": 32,
+        "condition": 23,
+        "features": [
+            "median_activity",
+            "activity_max",
+            "nighttime_mean_activity",
+            "day_night_ratio",
+            "most_active_hour",
+            "least_active_hour",
+            "activity_cv",
+            "estimated_sleep_hours",
+            "estimated_sleep_periods",
+            "sleep_regularity",
+            "mesor",
+            "relative_amplitude",
+            "trough_hours",
+            "fitted_min",
+            "rmse"
+        ]
+    },
+    "model": "Gradient Boosting",
+    "validation": "5-fold Stratified Cross-Validation",
+    "permutation_importance": [
+        {
+            "feature": "estimated_sleep_hours",
+            "importance_mean": 0.17079365079365083,
+            "importance_std": 0.06567044296994642,
+            "mean_permutation_std": 0.08929635861345445,
+            "absolute_importance": 0.17079365079365083
+        },
+        {
+            "feature": "trough_hours",
+            "importance_mean": 0.08400000000000003,
+            "importance_std": 0.06136990656745999,
+            "mean_permutation_std": 0.05509011371959346,
+            "absolute_importance": 0.08400000000000003
+        },
+        {
+            "feature": "day_night_ratio",
+            "importance_mean": 0.08193650793650797,
+            "importance_std": 0.08705075075699817,
+            "mean_permutation_std": 0.04385524987638958,
+            "absolute_importance": 0.08193650793650797
+        },
+        {
+            "feature": "most_active_hour",
+            "importance_mean": 0.03714285714285717,
+            "importance_std": 0.03156675570133371,
+            "mean_permutation_std": 0.036834205213735274,
+            "absolute_importance": 0.03714285714285717
+        },
+        {
+            "feature": "relative_amplitude",
+            "importance_mean": 0.036730158730158766,
+            "importance_std": 0.04873349996300794,
+            "mean_permutation_std": 0.05798681586873626,
+            "absolute_importance": 0.036730158730158766
+        },
+        {
+            "feature": "fitted_min",
+            "importance_mean": 0.03146031746031747,
+            "importance_std": 0.0510580173804849,
+            "mean_permutation_std": 0.03432005221286942,
+            "absolute_importance": 0.03146031746031747
+        },
+        {
+            "feature": "least_active_hour",
+            "importance_mean": 0.02226984126984128,
+            "importance_std": 0.030830120769903272,
+            "mean_permutation_std": 0.02665452220641516,
+            "absolute_importance": 0.02226984126984128
+        },
+        {
+            "feature": "activity_max",
+            "importance_mean": 0.009444444444444483,
+            "importance_std": 0.059765488203869906,
+            "mean_permutation_std": 0.038114783081231896,
+            "absolute_importance": 0.009444444444444483
+        },
+        {
+            "feature": "median_activity",
+            "importance_mean": -0.0041428571428571495,
+            "importance_std": 0.015243302681636671,
+            "mean_permutation_std": 0.011795720659417353,
+            "absolute_importance": 0.0041428571428571495
+        },
+        {
+            "feature": "activity_cv",
+            "importance_mean": -0.00407936507936508,
+            "importance_std": 0.010408572062775541,
+            "mean_permutation_std": 0.00980358788488941,
+            "absolute_importance": 0.00407936507936508
+        },
+        {
+            "feature": "rmse",
+            "importance_mean": 0.0022380952380952534,
+            "importance_std": 0.020978098694651247,
+            "mean_permutation_std": 0.009803598001245774,
+            "absolute_importance": 0.0022380952380952534
+        },
+        {
+            "feature": "mesor",
+            "importance_mean": 0.0022222222222222417,
+            "importance_std": 0.005610836076867805,
+            "mean_permutation_std": 0.011003095240159369,
+            "absolute_importance": 0.0022222222222222417
+        },
+        {
+            "feature": "sleep_regularity",
+            "importance_mean": 0.002222222222222226,
+            "importance_std": 0.0049690399499995415,
+            "mean_permutation_std": 0.004661372658534014,
+            "absolute_importance": 0.002222222222222226
+        },
+        {
+            "feature": "estimated_sleep_periods",
+            "importance_mean": 0.001428571428571428,
+            "importance_std": 0.0031943828249996983,
+            "mean_permutation_std": 0.002857142857142856,
+            "absolute_importance": 0.001428571428571428
+        },
+        {
+            "feature": "nighttime_mean_activity",
+            "importance_mean": 0.0,
+            "importance_std": 0.0,
+            "mean_permutation_std": 0.0,
+            "absolute_importance": 0.0
+        }
+    ],
+    "feature_group_importance": [
+        {
+            "feature_group": "Activity",
+            "number_of_features": 6,
+            "mean_absolute_importance": 0.026502645502645517,
+            "total_absolute_importance": 0.1590158730158731
+        },
+        {
+            "feature_group": "Sleep",
+            "number_of_features": 3,
+            "mean_absolute_importance": 0.058148148148148164,
+            "total_absolute_importance": 0.17444444444444449
+        },
+        {
+            "feature_group": "Circadian / Cosinor",
+            "number_of_features": 5,
+            "mean_absolute_importance": 0.03133015873015875,
+            "total_absolute_importance": 0.15665079365079376
+        }
+    ],
+    "final_oof_metrics": {
+        "accuracy": 0.8181818181818182,
+        "balanced_accuracy": 0.8070652173913043,
+        "precision": 0.8095238095238095,
+        "recall": 0.7391304347826086,
+        "f1": 0.7727272727272727,
+        "roc_auc": 0.8953804347826086
+    },
+    "interpretation_note": "Permutation importance was calculated on held-out validation folds. Positive importance indicates that permuting the feature reduced validation ROC-AUC on average. Importance values describe predictive contribution and do not establish causation or clinical diagnostic validity."
+}

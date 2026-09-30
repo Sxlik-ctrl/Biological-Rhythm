@@ -1,0 +1,4 @@
+feature_group,number_of_features,mean_absolute_importance,total_absolute_importance
+Activity,6,0.026502645502645517,0.1590158730158731
+Sleep,3,0.058148148148148164,0.17444444444444449
+Circadian / Cosinor,5,0.03133015873015875,0.15665079365079376

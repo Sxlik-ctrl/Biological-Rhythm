@@ -1,0 +1,12 @@
+feature_1,feature_2,spearman_correlation
+hourly_records,estimated_wake_hours,0.9538990388016421
+mean_activity,daytime_mean_activity,0.980880230880231
+mean_activity,mesor,0.9997113997113998
+mean_activity,fitted_max,0.9612554112554115
+activity_std,total_activity,0.9012987012987015
+daytime_mean_activity,mesor,0.9798701298701301
+daytime_mean_activity,amplitude,0.9272727272727276
+daytime_mean_activity,fitted_max,0.9834054834054836
+nighttime_mean_activity,mean_night_activity,1.0
+mesor,fitted_max,0.9609668109668111
+amplitude,fitted_max,0.9709956709956711

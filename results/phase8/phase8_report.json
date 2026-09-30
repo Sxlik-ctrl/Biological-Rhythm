@@ -1,0 +1,95 @@
+{
+    "project": "Automated Biological Rhythm Analysis & Health State Classification",
+    "phase": "Phase 8 - Final Integration",
+    "summary": {
+        "subjects": 55,
+        "condition_subjects": 23,
+        "control_subjects": 32,
+        "activity_feature_rows": 55,
+        "sleep_feature_rows": 55,
+        "cosinor_subjects": 55,
+        "cosinor_successful_subjects": 55,
+        "statistical_features": 28,
+        "fdr_significant_features": 7,
+        "ml_models": 4,
+        "gradient_boosting_roc_auc": 0.8953804347826086,
+        "gradient_boosting_accuracy": 0.8181818181818182,
+        "gradient_boosting_f1": 0.7727272727272727,
+        "top_explainability_feature": "estimated_sleep_hours",
+        "top_feature_importance": 0.1707936507936508,
+        "highest_mean_importance_group": "Sleep"
+    },
+    "validation_checks": [
+        {
+            "check": "Total subjects = 55",
+            "expected": 55,
+            "observed": 55,
+            "status": "PASS"
+        },
+        {
+            "check": "Condition subjects = 23",
+            "expected": 23,
+            "observed": 23,
+            "status": "PASS"
+        },
+        {
+            "check": "Control subjects = 32",
+            "expected": 32,
+            "observed": 32,
+            "status": "PASS"
+        },
+        {
+            "check": "Activity feature rows = 55",
+            "expected": 55,
+            "observed": 55,
+            "status": "PASS"
+        },
+        {
+            "check": "Sleep feature rows = 55",
+            "expected": 55,
+            "observed": 55,
+            "status": "PASS"
+        },
+        {
+            "check": "Cosinor subjects = 55",
+            "expected": 55,
+            "observed": 55,
+            "status": "PASS"
+        },
+        {
+            "check": "FDR-significant features = 7",
+            "expected": 7,
+            "observed": 7,
+            "status": "PASS"
+        },
+        {
+            "check": "Gradient Boosting ROC-AUC",
+            "expected": "Approximately 0.895",
+            "observed": 0.8953804347826086,
+            "status": "PASS"
+        },
+        {
+            "check": "Gradient Boosting accuracy",
+            "expected": "Approximately 0.818",
+            "observed": 0.8181818181818182,
+            "status": "PASS"
+        },
+        {
+            "check": "Top explainability feature",
+            "expected": "estimated_sleep_hours",
+            "observed": "estimated_sleep_hours",
+            "status": "PASS"
+        }
+    ],
+    "methodological_notes": [
+        "The project contains 55 subjects: 23 condition and 32 control.",
+        "Hourly visualization was used for the main activity analysis while fine-grained activity data were retained for detailed processing.",
+        "The sleep analysis uses activity-derived heuristics and is not a clinical sleep measurement.",
+        "Cosinor analysis used a fixed 24-hour period.",
+        "The final ML evaluation used 5-fold stratified cross-validation.",
+        "Recording-duration variables were excluded from the final ML evaluation.",
+        "Phase 7 permutation importance was calculated on held-out validation folds.",
+        "The classification results are exploratory and should not be interpreted as clinical diagnostic performance."
+    ],
+    "final_conclusion": "The integrated analysis demonstrates that activity, sleep-related and circadian features can provide predictive information for distinguishing condition and control subjects in the Depresjon dataset. The final Gradient Boosting evaluation achieved an out-of-fold ROC-AUC of approximately 0.895 and accuracy of approximately 0.818. Estimated sleep hours showed the highest individual held-out permutation importance in the final explainability analysis. These findings are dataset-specific and exploratory rather than clinical validation."
+}

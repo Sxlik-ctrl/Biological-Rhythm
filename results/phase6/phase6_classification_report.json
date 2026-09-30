@@ -1,0 +1,232 @@
+{
+    "phase": "Phase 6 - Machine Learning Health-State Classification",
+    "dataset": {
+        "subjects": 55,
+        "condition": 23,
+        "control": 32,
+        "features": 17
+    },
+    "validation": {
+        "method": "Stratified K-Fold Cross-Validation",
+        "folds": 5,
+        "shuffle": true,
+        "random_state": 42
+    },
+    "models": [
+        "Logistic Regression",
+        "Random Forest",
+        "SVM",
+        "Gradient Boosting"
+    ],
+    "cross_validation_results": [
+        {
+            "model": "Logistic Regression",
+            "accuracy_mean": 0.7636363636363637,
+            "accuracy_std": 0.09270944570168699,
+            "balanced_accuracy_mean": 0.7580952380952382,
+            "balanced_accuracy_std": 0.07895792386769422,
+            "precision_mean": 0.7442857142857143,
+            "precision_std": 0.15441793276424756,
+            "recall_mean": 0.74,
+            "recall_std": 0.07348469228349536,
+            "f1_mean": 0.7314285714285714,
+            "f1_std": 0.08134916763452428,
+            "roc_auc_mean": 0.8699999999999999,
+            "roc_auc_std": 0.06041429153201412
+        },
+        {
+            "model": "Random Forest",
+            "accuracy_mean": 0.8363636363636363,
+            "accuracy_std": 0.06803013430498073,
+            "balanced_accuracy_mean": 0.8247619047619047,
+            "balanced_accuracy_std": 0.059062018213610436,
+            "precision_mean": 0.8800000000000001,
+            "precision_std": 0.16,
+            "recall_mean": 0.74,
+            "recall_std": 0.07348469228349536,
+            "f1_mean": 0.7925396825396825,
+            "f1_std": 0.07895066406951166,
+            "roc_auc_mean": 0.89,
+            "roc_auc_std": 0.06640083052782232
+        },
+        {
+            "model": "SVM",
+            "accuracy_mean": 0.7636363636363637,
+            "accuracy_std": 0.07272727272727271,
+            "balanced_accuracy_mean": 0.7547619047619049,
+            "balanced_accuracy_std": 0.06054832593261872,
+            "precision_mean": 0.7533333333333333,
+            "precision_std": 0.1355646627177517,
+            "recall_mean": 0.7,
+            "recall_std": 0.08366600265340757,
+            "f1_mean": 0.7168831168831169,
+            "f1_std": 0.07395378875865842,
+            "roc_auc_mean": 0.8057142857142858,
+            "roc_auc_std": 0.08611809641772308
+        },
+        {
+            "model": "Gradient Boosting",
+            "accuracy_mean": 0.7818181818181819,
+            "accuracy_std": 0.07272727272727271,
+            "balanced_accuracy_mean": 0.7607142857142858,
+            "balanced_accuracy_std": 0.06934255563992242,
+            "precision_mean": 0.8166666666666667,
+            "precision_std": 0.1527525231651947,
+            "recall_mean": 0.65,
+            "recall_std": 0.10954451150103324,
+            "f1_mean": 0.7145021645021645,
+            "f1_std": 0.09436931565258151,
+            "roc_auc_mean": 0.89,
+            "roc_auc_std": 0.07781599320310667
+        }
+    ],
+    "out_of_fold_results": [
+        {
+            "model": "Logistic Regression",
+            "accuracy": 0.7636363636363637,
+            "balanced_accuracy": 0.7601902173913043,
+            "precision": 0.7083333333333334,
+            "recall": 0.7391304347826086,
+            "f1": 0.723404255319149,
+            "roc_auc": 0.8654891304347827
+        },
+        {
+            "model": "Random Forest",
+            "accuracy": 0.8363636363636363,
+            "balanced_accuracy": 0.8226902173913043,
+            "precision": 0.85,
+            "recall": 0.7391304347826086,
+            "f1": 0.7906976744186046,
+            "roc_auc": 0.8967391304347826
+        },
+        {
+            "model": "SVM",
+            "accuracy": 0.7636363636363637,
+            "balanced_accuracy": 0.7540760869565217,
+            "precision": 0.7272727272727273,
+            "recall": 0.6956521739130435,
+            "f1": 0.7111111111111111,
+            "roc_auc": 0.8125
+        },
+        {
+            "model": "Gradient Boosting",
+            "accuracy": 0.7818181818181819,
+            "balanced_accuracy": 0.7635869565217391,
+            "precision": 0.7894736842105263,
+            "recall": 0.6521739130434783,
+            "f1": 0.7142857142857143,
+            "roc_auc": 0.9089673913043479
+        }
+    ],
+    "classification_reports": {
+        "Logistic Regression": {
+            "control": {
+                "precision": 0.8064516129032258,
+                "recall": 0.78125,
+                "f1-score": 0.7936507936507936,
+                "support": 32.0
+            },
+            "condition": {
+                "precision": 0.7083333333333334,
+                "recall": 0.7391304347826086,
+                "f1-score": 0.723404255319149,
+                "support": 23.0
+            },
+            "accuracy": 0.7636363636363637,
+            "macro avg": {
+                "precision": 0.7573924731182795,
+                "recall": 0.7601902173913043,
+                "f1-score": 0.7585275244849713,
+                "support": 55.0
+            },
+            "weighted avg": {
+                "precision": 0.7654203323558162,
+                "recall": 0.7636363636363637,
+                "f1-score": 0.7642749685302876,
+                "support": 55.0
+            }
+        },
+        "Random Forest": {
+            "control": {
+                "precision": 0.8285714285714286,
+                "recall": 0.90625,
+                "f1-score": 0.8656716417910447,
+                "support": 32.0
+            },
+            "condition": {
+                "precision": 0.85,
+                "recall": 0.7391304347826086,
+                "f1-score": 0.7906976744186046,
+                "support": 23.0
+            },
+            "accuracy": 0.8363636363636363,
+            "macro avg": {
+                "precision": 0.8392857142857143,
+                "recall": 0.8226902173913043,
+                "f1-score": 0.8281846581048247,
+                "support": 55.0
+            },
+            "weighted avg": {
+                "precision": 0.8375324675324676,
+                "recall": 0.8363636363636363,
+                "f1-score": 0.8343188917989334,
+                "support": 55.0
+            }
+        },
+        "SVM": {
+            "control": {
+                "precision": 0.7878787878787878,
+                "recall": 0.8125,
+                "f1-score": 0.8,
+                "support": 32.0
+            },
+            "condition": {
+                "precision": 0.7272727272727273,
+                "recall": 0.6956521739130435,
+                "f1-score": 0.7111111111111111,
+                "support": 23.0
+            },
+            "accuracy": 0.7636363636363637,
+            "macro avg": {
+                "precision": 0.7575757575757576,
+                "recall": 0.7540760869565217,
+                "f1-score": 0.7555555555555555,
+                "support": 55.0
+            },
+            "weighted avg": {
+                "precision": 0.7625344352617079,
+                "recall": 0.7636363636363637,
+                "f1-score": 0.762828282828283,
+                "support": 55.0
+            }
+        },
+        "Gradient Boosting": {
+            "control": {
+                "precision": 0.7777777777777778,
+                "recall": 0.875,
+                "f1-score": 0.8235294117647058,
+                "support": 32.0
+            },
+            "condition": {
+                "precision": 0.7894736842105263,
+                "recall": 0.6521739130434783,
+                "f1-score": 0.7142857142857143,
+                "support": 23.0
+            },
+            "accuracy": 0.7818181818181819,
+            "macro avg": {
+                "precision": 0.7836257309941521,
+                "recall": 0.7635869565217391,
+                "f1-score": 0.76890756302521,
+                "support": 55.0
+            },
+            "weighted avg": {
+                "precision": 0.782668793195109,
+                "recall": 0.7818181818181819,
+                "f1-score": 0.7778456837280366,
+                "support": 55.0
+            }
+        }
+    },
+    "methodological_note": "Feature selection from Phase 5 was exploratory. Model preprocessing is performed inside cross-validation pipelines. Performance estimates should be interpreted cautiously because the dataset contains only 55 subjects."
+}
